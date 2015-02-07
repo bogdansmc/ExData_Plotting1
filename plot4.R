@@ -3,7 +3,7 @@ x[,1] <- as.Date(x[,1], "%d/%m/%Y")
 y <- x[x$Date == as.Date("2007-02-02") | x$Date == as.Date("2007-02-01"),]
 y$DateTime <- strptime(paste(y[,1], y[,2]), "%Y-%m-%d %H:%M:%OS")
 
-png("plot4.png")
+png("plot4.png", bg = "transparent")
 par(mfrow = c(2,2))
 
 plot(y$DateTime, y$Global_active_power, type="l", xlab="", ylab="Global Active Power")
